@@ -50,42 +50,79 @@ Before running the app, ensure you have the following installed:
 - Git
 - Docker
 
-## Installation 💻
+## Setup with Docker 💻
 
 1. Clone the repository:
 
   ```bash
-  git clone https://github.com/yourusername/mental-health-assistant.git
+  git clone https://github.com/RajeevMaheshwari/Mental-Heath-Assistant.git
+  cd Mental-Heath-Assistant
   ```
 
-2. Change into the project directory:
-
-  ```bash
-  cd mental-health-assistant
-  ```
-
-3. Generate a key from [GEMINI_API_KEY](https://aistudio.google.com/app/apikey) and add it to a .env file in project directory:
+2. Generate a key from [GEMINI_API_KEY](https://aistudio.google.com/app/apikey) and add it to a .env file in project directory:
 
   ```
   GEMINI_API_KEY=<YOUR_API_KEY>
   ```
 
-4. Build and run the Docker Image:
+3. Build and run the Docker Image:
 
   ```bash
   docker compose up
   ```
 Note: Build can take upto 20-30 minutes. Please wait for it to finish.
 
-5. Access the app in your browser at `http://localhost:8501`.
+4. Access the app in your browser at `http://localhost:8501`.
 
 ![App Preview](image2.png)
 
-6. To close the program:
+5. To close the program:
 
   ```bash
   docker compose down
   ```
+
+## Setup Locally 💻
+
+1. Clone the repository:
+
+  ```bash
+  git clone https://github.com/RajeevMaheshwari/Mental-Heath-Assistant.git
+  cd Mental-Heath-Assistant
+  ```
+
+2. Generate a key from [GEMINI_API_KEY](https://aistudio.google.com/app/apikey) and add it to a .env file in project directory:
+
+  ```
+  GEMINI_API_KEY=<YOUR_API_KEY>
+  ```
+
+3. Create a venv and install all dependencies
+  ```
+  python3 -m venv venv
+  source venv/bin/activate
+  pip install -r requirements.txt
+  pip install -r ui/requirements.txt
+  pip install "numpy<2.0"
+  python3 nltk_dependencies.py
+  ```
+
+4. Run The UI and backend separately
+  For streamlit UI run
+  ```
+  streamlit run ui/server.py --server.port=8501 --server.address=0.0.0.0
+  ```
+  And for backend run
+  ```
+  python3 app.py
+  ```
+
+
+
+5. Access the app in your browser at `http://localhost:8501`.
+
+![App Preview](image2.png)
+
 
 ## Future Improvements 🚀
 
