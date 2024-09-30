@@ -10,7 +10,7 @@ COPY requirements.txt .
 RUN pip install -U --no-cache-dir -r requirements.txt
 
 COPY . .
-RUN nltk_dependencies.py
+RUN python nltk_dependencies.py
 EXPOSE 8000
 
 CMD ["python", "app.py"]
