@@ -3,8 +3,10 @@
 This application is designed to facilitate mental health support through interactive question-and-answer sessions using an LLM-based chatbot. Built with **Pathway's LLM-App** for natural language understanding and **Streamlit** for the user interface, it provides users with personalized responses for mental health queries, offering emotional support and mental wellness tips.
 
 ## Video Demo of the APP 🎥
-<video src="video.mp4" controls="controls" >
-</video>
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/US7dEV-rPe0/0.jpg)](https://www.youtube.com/watch?v=US7dEV-rPe0)
+
+Video Link: https://youtu.be/US7dEV-rPe0
 
 
 ## Description 📝
